@@ -91,11 +91,13 @@ const List = () => {
               onChange={(e) => setState({ ...state, searchTerm: e.target.value })}
               value={state.searchTerm}
               autoFocus
+              style={{ width: "300px" }}
             />
             <select
               className="form-control"
               onChange={(e) => setState({ ...state, year: e.target.value })}
               value={state.year}
+              style={{ width: "150px" }}
             >
               <option value="">Seleccionar año</option>
               {generateYearOptions()}
@@ -104,6 +106,7 @@ const List = () => {
               className="form-control"
               onChange={(e) => setState({ ...state, contentType: e.target.value })}
               value={state.contentType}
+              style={{ width: "150px" }}
             >
               <option value="">Tipo de contenido</option>
               <option value="movie">Película</option>
