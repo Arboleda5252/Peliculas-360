@@ -17,7 +17,7 @@ const NavbarMain = () => {
             <Nav.Link as={Link} to='/'>Inicio</Nav.Link>
             <Nav.Link as={Link} to='/info'>Acerca de nosotros</Nav.Link>
             <Nav.Link as={Link} to='/'>Contacto</Nav.Link>
-            <Nav.Link as={Link} to='/'>Redes Sociales</Nav.Link>
+            <Nav.Link as={Link} to='/redSocial'>Redes Sociales</Nav.Link>
             <Nav.Link as={Link} to='/ayuda'>Ayuda</Nav.Link>
           </Nav>
         </Navbar.Collapse>
