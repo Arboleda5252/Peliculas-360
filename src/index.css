@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+.logo {
+  padding-right: 10px; /* Agrega espacio a la derecha del texto */
+  font-family: 'Arial', sans-serif; /* Cambia el tipo de letra a Arial o el que desees */
+  /* Agrega más estilos según tus preferencias */
+}
+
 body {
   background: #343A40;
 }
+
