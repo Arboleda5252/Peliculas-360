@@ -27,13 +27,13 @@ const Footer = () => {
 						</a>
 					</p>
 					<p className="col">
-						<a className="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">
+						<Link to="/redSocial" className="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">
 							Redes sociales
-						</a>
+						</Link>
 					</p>
 					<p className="col">
 						<Link to="/ayuda" className="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">
-							Ayuda
+							Preguntas Frecuentes
 						</Link>
 					</p>
 				</div>
