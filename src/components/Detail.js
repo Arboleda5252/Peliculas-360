@@ -1,27 +1,33 @@
-import { useEffect, useState } from "react"
+import React, {useState} from "react";
 import { useParams } from "react-router-dom";
 
 const API = process.env.API;
 
 const Detail = () => {
 
-    const [movie, setMovie  ] = useState();
-    
-    const title = useParams().title;
+    const { id } = useParams();
+    console.log(id);
 
-    useEffect(() => {
-        fetch(`${API}&t=${title}`)
-        .then((res) => res.json())
-        .then((data) => {
-            setMovie(data);
-        });
-    }, [title]);
+    const [movie, setMovie] = useState({});
 
-    return(
+    React.useEffect(() => {
+        obtenerDatos();
+    }, []);
+
+    const obtenerDatos = async () => {
+        const data = await fetch(`${API}&t=${id}&plot=full`);
+        const movies = await data.json();
+        setMovie(movies);
+    }
+
+    return (
         <div>
-            console.log(movie);
+            <h1>{movie.Title}</h1>
+            <p>{movie.Country}</p>
+            <p>{movie.Plot}</p>
+            <img src={movie.Poster} alt={movie.Title}/>
         </div>
-    );
+    )
 }
 
 export default Detail;

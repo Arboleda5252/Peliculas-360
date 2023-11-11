@@ -3,20 +3,24 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const Card = ({ movie }) => (
-  <div className="col-md-4">
+  <div className="col-md-4 my-3" style={{ width: '15rem' }}>
     <Link to={`/detail/${movie.Title}`}>
-    <div className="card animated fadeInUp ">
-      <img
-        src={movie.Poster}
-        alt={movie.Title}
-        className="card-img-top"
-        width="100"
-      />
-      <div className="card-body">
-        <h4>{`${movie.Title} (${movie.Year})`}</h4>
-        <p>{`Type: ${movie.Type}`}</p>
+      <div className="card animated fadeInUp ">
+        <img
+          src={
+            movie.Poster === "N/A"
+              ? "https://i.imgur.com/PHZVZvp.png"
+              : movie.Poster
+          }
+          alt={movie.Title}
+          className="card-img-top"
+          width="100"
+        />
+        <div className="card-body " style={{ height: 'auto' }}>
+          <h4>{`${movie.Title} (${movie.Year})`}</h4>
+          <p>{`Type: ${movie.Type}`}</p>
+        </div>
       </div>
-    </div>
     </Link>
   </div>
 );

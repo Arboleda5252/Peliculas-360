@@ -120,7 +120,7 @@ const List = () => {
         </div>
       </div>
       <div >
-        <div className="row pt-2">
+        <div className="row pt-2 d-flex justify-content-evenly">
           {data.map((movie, i) => (
             <Card movie={movie} key={i} />
           ))}
