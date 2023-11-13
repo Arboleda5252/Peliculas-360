@@ -16,7 +16,6 @@ const NavbarMain = () => {
           <Nav className='ms-auto'>
             <Nav.Link as={Link} to='/'>Inicio</Nav.Link>
             <Nav.Link as={Link} to='/info'>Acerca de nosotros</Nav.Link>
-            <Nav.Link as={Link} to='/'>Contacto</Nav.Link>
             <Nav.Link as={Link} to='/contacUs'>Contactenos</Nav.Link>
             <Nav.Link as={Link} to='/ayuda'>Ayuda</Nav.Link>
           </Nav>
