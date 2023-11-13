@@ -21,6 +21,7 @@ const App = () => {
           <NavbarMain/>
           <Routes className="bg-dark">
                 <Route path="/" element={<List/>}/>
+                <Route path="/:resultado/:num" element={<List/>}/>
                 <Route path="/info" element={<Info/>}/>
                 <Route path="/ayuda" element={<Ayuda/>}/>
                 <Route path="/detail/:id" element={<Detail/>}/>
