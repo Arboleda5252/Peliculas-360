@@ -13,7 +13,7 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Info from "./components/Footer/info";
 import Ayuda from "./components/Footer/ayuda";
 import Detail from "./components/Detail";
-import SocialNetworks from "./components/Footer/socialNetworks";
+import ContacUs from "./components/Footer/ContacUs";
 
 const App = () => {
   return (
@@ -24,7 +24,7 @@ const App = () => {
                 <Route path="/info" element={<Info/>}/>
                 <Route path="/ayuda" element={<Ayuda/>}/>
                 <Route path="/detail/:id" element={<Detail/>}/>
-                <Route path="/redSocial" element={<SocialNetworks/>}/>
+                <Route path="/contacUs" element={<ContacUs/>}/>
                 <Route path="*" element={<Navigate replace to="/"/>}/>
           </Routes>
           <Footer/>

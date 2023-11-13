@@ -3,7 +3,7 @@ import { AiFillFacebook, AiOutlineInstagram, AiOutlineYoutube } from "react-icon
 import { RiTwitterXFill } from "react-icons/ri";
 import { BsTelegram, BsDiscord } from "react-icons/bs";
 
-const SocialNetworks = () => {
+const ContacUs = () => {
     return (
         <div>
             <h3 className="text-center text-info m-3">
@@ -55,4 +55,4 @@ const SocialNetworks = () => {
     );
 };
 
-export default SocialNetworks;
+export default ContacUs;
