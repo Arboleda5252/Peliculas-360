@@ -13,7 +13,7 @@ const ContacUs = () => {
             <p className="mt-4 mx-5 px-5 text-light text-center">
                 A continuación, nuestras redes sociales y el formulario de contacto, donde encontrarás las últimas novedades sobre las películas más recientes o contactarnos, directamente desde la comodidad de tu hogar. Te invitamos cordialmente a unirte a nuestra comunidad en línea y seguirnos en las siguientes redes.  ¡No te pierdas ni una sola actualización!
             </p>
-            <div class="form-main">
+            <div class="form-main text-light">
                 <div class="main-wrapper">
                     <h2 class="form-head">Contact From</h2>
                     <form class="form-wrapper">
