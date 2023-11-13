@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import "../Footer/ayuda.css";
 
 const Card = ({ movie }) => (
   <div className="col-md-4 my-3" style={{ width: '15rem' }}>
-    <Link to={`/detail/${movie.Title}`}>
+    <Link to={`/detail/${movie.Title}`} className="link-underline link-underline-opacity-0 ">
       <div className="card animated fadeInUp ">
         <img
           src={
@@ -13,12 +14,12 @@ const Card = ({ movie }) => (
               : movie.Poster
           }
           alt={movie.Title}
-          className="card-img-top"
+          className="card-img-top zoom-on-hover"
           width="100"
         />
         <div className="card-body " style={{ height: 'auto' }}>
-          <h4>{`${movie.Title} (${movie.Year})`}</h4>
-          <p>{`Type: ${movie.Type}`}</p>
+          <p className="text-center fs-5 fw-bold">{`${movie.Title} (${movie.Year})`}</p>
+          <p className="text-center">{`Type: ${movie.Type}`}</p>
         </div>
       </div>
     </Link>
