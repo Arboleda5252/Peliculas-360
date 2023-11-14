@@ -8,8 +8,7 @@ const NavbarMain = () => {
     <Navbar className='navNg' bg='dark' data-bs-theme="dark" expand='lg'>
       <Container>
         <Navbar.Brand as={Link} to='/'>
-          <img src="https://i.imgur.com/PHZVZvp.png" alt="logo" width="70" style={{ paddingRight: '10px', fontFamily: 'Arial, sans-serif' }}/>
-           Peliculas360
+          <img src="https://i.imgur.com/UM9gIWx.png" alt="logo" width="180" style={{ paddingRight: '10px' }}/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls='lista-comprimida'/>
         <Navbar.Collapse id='lista-comprimida'>
