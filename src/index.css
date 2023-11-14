@@ -16,7 +16,6 @@ body {
 
 
 .form-main {
-  background: linear-gradient(to bottom, #00000024, #00000024);
   background-size: cover;
   min-height: 100vh;
   display: flex;
