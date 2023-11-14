@@ -1,9 +1,21 @@
 import React, { useState } from "react";
 import "./ayuda.css";
 import Commentss from "./commentss";
+import { useRef } from "react";
 
 function Questions() {
-    
+    const containerRef = useRef(null);
+
+    const handleItemClick = (itemId) => {
+      const element = document.getElementById(itemId);
+      if (element && containerRef.current) {
+        const containerOffsetTop = containerRef.current.offsetTop;
+        const elementOffsetTop = element.offsetTop;
+        const offset = elementOffsetTop - containerOffsetTop;
+        containerRef.current.scrollTop = offset;
+      }
+    };
+
     return (
         <div>
             <div>
@@ -15,19 +27,19 @@ function Questions() {
                 <div className="col-4 border border-info p-2 mb-2 bg-dark p-3">
                     <nav id="navbar-example3" className="h-100 flex-column align-items-stretch pe-4 border-end">
                         <nav className="nav nav-pills flex-column">
-                            <a className="nav-link" href="#item-1">¿Cómo puedo ver la informacion de la película o serie?</a>
-                            <a className="nav-link" href="#item-1-1">¿Como reproducir una pelicula?</a>
-                            <a className="nav-link" href="#item-2">¿Como buscar una pelicula?</a>
-                            <a className="nav-link" href="#item-3">La película no me funciona</a>
-                            <a className="nav-link" href="#item-3-1">¿Qué hago si tengo problemas de reproducción?</a>
-                            <a className="nav-link" href="#item-4">¿Puedo descargar películas para verlas sin conexión?</a>
-                            <a className="nav-link" href="#item-5">¿Ofrecen contenido en varios idiomas o con subtítulos?</a>
-                            <a className="nav-link" href="#item-6">¿Cómo puedo contactar con el servicio de asistencia?</a>
+                            <a className="nav-link" onClick={() => handleItemClick("item-1")}>¿Cómo puedo ver la informacion de la película o serie?</a>
+                            <a className="nav-link" onClick={() => handleItemClick("item-1-1")}>¿Como reproducir una pelicula?</a>
+                            <a className="nav-link" onClick={() => handleItemClick("item-2")}>¿Como buscar una pelicula?</a>
+                            <a className="nav-link" onClick={() => handleItemClick("item-3")}>La película no me funciona</a>
+                            <a className="nav-link" onClick={() => handleItemClick("item-3-1")}>¿Qué hago si tengo problemas de reproducción?</a>
+                            <a className="nav-link" onClick={() => handleItemClick("item-4")}>¿Puedo descargar películas para verlas sin conexión?</a>
+                            <a className="nav-link" onClick={() => handleItemClick("item-5")}>¿Ofrecen contenido en varios idiomas o con subtítulos?</a>
+                            <a className="nav-link" onClick={() => handleItemClick("item-6")}>¿Cómo puedo contactar con el servicio de asistencia?</a>
                         </nav>
                     </nav>
                 </div>
                 <div className="col-8 border border-info p-2 mb-2 bg-dark text-light p-3">
-                    <div className="overflow-container ">
+                    <div className="overflow-container " ref={containerRef}>
                         <div id="item-1">
                             <h5>¿Cómo puedo ver la película o serie?</h5>
                             <p>

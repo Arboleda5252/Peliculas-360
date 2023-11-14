@@ -54,18 +54,15 @@ const Commentss = () => {
       <div className='row border border-info p-2 mb-2 bg-dark m-3 my-1'
       >
         <p className='text-light p-1 text-center fw-bold' >Comentarios anteriores</p>
-        <div className='col-12 d-flex justify-content-center align-items-center'
+        <div className='d-flex'
         >
-          <ul className='text-light'
-        >
-          {comments.map((comment, index) => (
-            <li key={index}>{comment}</li>
-          ))}
-        </ul>
+          <p className='text-light p-1 fw-bold'>
+            {comments.map((comment, index) => (
+              <p key={index} className='p-3 px-5 m-2 bg-info bg-opacity-10 border border-info border-start-0 rounded-end'>{comment}</p>
+            ))}
+          </p>
         </div>
-        
       </div>
-
     </div>
   );
 };
